@@ -55,7 +55,7 @@ function eventoOnBlur(){
       break
 
     case "musica":
-      document.getElementById('sel_postres').disabled=true
+      document.getElementById('sel_musica').disabled=true
       $(document).ready(function(){$('select').material_select()})
       break
 
