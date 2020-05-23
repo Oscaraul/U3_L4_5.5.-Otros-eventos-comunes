@@ -25,34 +25,35 @@ function eventoOnFocus(event){
     case "animales":
     document.getElementById('sel_animales').disabled=false;
     $(document).ready(function(){$('select').material_select();});
-
     break;
-    case "postre":
+
+    case "postres":
     document.getElementById('sel_postres').disabled=false;
     $(document).ready(function(){$('select').material_select();});
-
     break;
+
     case "musica":
     document.getElementById('sel_musica').disabled=false;
     $(document).ready(function(){$('select').material_select();});
-
     break;
 
     default:
   }
 }
 
-function eventosOnBlur(){
+function eventoOnBlur(){
   var seleccion = event.currentTarget.id;
   switch (seleccion) {
     case "animales":
       document.getElementById('sel_animales').disabled=true
       $(document).ready(function(){$('select').material_select()})
       break
+
     case "postres":
       document.getElementById('sel_postres').disabled=true
       $(document).ready(function(){$('select').material_select()})
       break
+
     case "musica":
       document.getElementById('sel_postres').disabled=true
       $(document).ready(function(){$('select').material_select()})
@@ -65,13 +66,13 @@ function eventosOnBlur(){
 /*Las dos funciones onfocus y onblur debemos asociar a los radiobuttons*/
 
 function asignarEventosRB(){
-  document.getElementById('animales').onfocus=eventoOnFocus;
-  document.getElementById('postres').onfocus=eventoOnFocus;
-  document.getElementById('musica').onfocus=eventoOnFocus;
+  document.getElementById('animales').onfocus=eventoOnFocus
+  document.getElementById('postres').onfocus=eventoOnFocus
+  document.getElementById('musica').onfocus=eventoOnFocus
 
-  document.getElementById('animales').onblur=eventosOnBlur;
-  document.getElementById('postres').onblur=eventosOnBlur;
-  document.getElementById('musica').onblur=eventosOnBlur;
+  document.getElementById('animales').onblur=eventoOnBlur
+  document.getElementById('postres').onblur=eventoOnBlur
+  document.getElementById('musica').onblur=eventoOnBlur
 }
 
 asignarEventosRB();
