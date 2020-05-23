@@ -18,3 +18,46 @@ function cargarPagina(){
 }
 
 document.getElementsByTagName('body')[0].onload=cargarPagina;
+
+function eventoOnFocus(event){
+  var seleccion=event.currentTarget.id;
+  switch(seleccion){
+    case "animales":
+    document.getElementById('sel_animales').disabled=false;
+    $(document).ready(function(){$('select').material_select();});
+
+    break;
+    case "postre":
+    document.getElementById('sel_postres').disabled=false;
+    $(document).ready(function(){$('select').material_select();});
+
+    break;
+    case "musica":
+    document.getElementById('sel_musica').disabled=false;
+    $(document).ready(function(){$('select').material_select();});
+
+    break;
+
+    default:
+  }
+}
+
+function eventosOnBlur(){
+  var seleccion = event.currentTarget.id;
+  switch (seleccion) {
+    case "animales":
+      document.getElementById('sel_animales').disabled=true
+      $(document).ready(function(){$('select').material_select()})
+      break
+    case "postres":
+      document.getElementById('sel_postres').disabled=true
+      $(document).ready(function(){$('select').material_select()})
+      break
+    case "musica":
+      document.getElementById('sel_postres').disabled=true
+      $(document).ready(function(){$('select').material_select()})
+      break
+
+    default:
+  }
+}
