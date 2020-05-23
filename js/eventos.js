@@ -61,3 +61,17 @@ function eventosOnBlur(){
     default:
   }
 }
+
+/*Las dos funciones onfocus y onblur debemos asociar a los radiobuttons*/
+
+function asignarEventosRB(){
+  document.getElementById('animales').onfocus=eventoOnFocus;
+  document.getElementById('postres').onfocus=eventoOnFocus;
+  document.getElementById('musica').onfocus=eventoOnFocus;
+
+  document.getElementById('animales').onblur=eventosOnBlur;
+  document.getElementById('postres').onblur=eventosOnBlur;
+  document.getElementById('musica').onblur=eventosOnBlur;
+}
+
+asignarEventosRB();
